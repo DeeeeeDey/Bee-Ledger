@@ -1,0 +1,16 @@
+{
+  "name": "bee-ledger-root",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run node:hardhat\" \"wait-on tcp:8545 && npm run setup:seed\" \"wait-on tcp:8545 && wait-on file:./backend/contractData.json && npm run start:backend\" \"wait-on tcp:8545 && wait-on file:./frontend/src/contractData.json && npm run start:frontend\"",
+    "node:hardhat": "cd blockchain && npx hardhat node",
+    "setup:seed": "cd blockchain && npx hardhat run scripts/deployAndSeed.js --network localhost",
+    "start:backend": "cd backend && node server.js",
+    "start:frontend": "cd frontend && npm run dev"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "wait-on": "^7.2.0"
+  }
+}

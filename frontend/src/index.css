@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --honey-gold: #F5A623;
+  --honey-amber: #E8952B;
+  --honey-deep: #C97A1E;
+  --comb-brown: #3D2914;
+  --comb-brown-light: #6B4A2A;
+  --cream-bg: #FFF9EF;
+  --cream-card: #FFFFFF;
+  --wax-beige: #FAEBD0;
+  --success-green: #4A8B3B;
+  --alert-red: #C1443C;
+  --pending-amber: #E0A85C;
+  
+  --card-shadow: 0 4px 20px rgba(61, 41, 20, 0.08);
+  --card-shadow-hover: 0 8px 28px rgba(61, 41, 20, 0.14);
+  --glow-gold: 0 0 0 1px rgba(245, 166, 35, 0.25), 0 0 24px rgba(245, 166, 35, 0.35);
+}
+
+body {
+  background-color: var(--cream-bg);
+  color: var(--comb-brown);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--cream-bg);
+}
+
+/* Subtle Hexagon Pattern Background */
+.bg-hex-pattern {
+  background-color: var(--wax-beige);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='69.28203230275509' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 17.32050807568877l-20 11.547005383792515L0 17.32050807568877V-5.773502691896257l20-11.547005383792515 20 11.547005383792515zM20 51.96152422706632L0 63.50852961085883v23.09401076758503l20 11.547005383792515 20-11.547005383792515V63.50852961085883z' fill='%23C97A1E' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.clip-hex {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--honey-gold);
+  border-radius: 10px;
+}
+
+/* Drifting Hexagons Fallback */
+.hex-drift {
+  animation: drift 20s linear infinite alternate;
+}
+
+@keyframes drift {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); }
+  100% { transform: translateY(-50px) translateX(30px) rotate(15deg); }
+}

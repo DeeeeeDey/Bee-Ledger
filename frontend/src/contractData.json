@@ -1,0 +1,474 @@
+{
+  "address": "0x424B7DB4a0F631CFE22932FA35dE837Cf6B7dFB9",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "batchId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "beekeeperName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "hiveId",
+          "type": "string"
+        }
+      ],
+      "name": "BatchCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum BeeLedger.Role",
+          "name": "role",
+          "type": "uint8"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "batchId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "stageName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "actorName",
+          "type": "string"
+        }
+      ],
+      "name": "StageUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "actorRoles",
+      "outputs": [
+        {
+          "internalType": "enum BeeLedger.Role",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_batchId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_stageName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_actorName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_notes",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "_isFinalized",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "_qualityTestResultUpdate",
+          "type": "string"
+        }
+      ],
+      "name": "addStageUpdate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "batchCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "batchHistories",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "stageName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "actorName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "notes",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "batches",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "batchId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "beekeeperName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "hiveId",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "harvestDate",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "quantityKg",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "qualityTestResult",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "currentStage",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "isFinalized",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_beekeeperName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_hiveId",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_harvestDate",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_quantityKg",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_qualityTestResult",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_notes",
+          "type": "string"
+        }
+      ],
+      "name": "createBatch",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllBatches",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "batchId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "beekeeperName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "hiveId",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "harvestDate",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "quantityKg",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "qualityTestResult",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "currentStage",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "isFinalized",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BeeLedger.Batch[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_batchId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBatch",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "batchId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "beekeeperName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "hiveId",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "harvestDate",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "quantityKg",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "qualityTestResult",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "currentStage",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "isFinalized",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BeeLedger.Batch",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_batchId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBatchHistory",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "stageName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "actorName",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "notes",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct BeeLedger.StageUpdate[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "enum BeeLedger.Role",
+          "name": "_role",
+          "type": "uint8"
+        }
+      ],
+      "name": "grantRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
