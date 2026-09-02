@@ -141,7 +141,7 @@ bee-ledger/
 - [ ] Multi-language support for beekeeper-facing screens
 
 ## 👥 Team
-Built by **[Your Team Name]** for Smart India Hackathon 2026.
+Built by **Bee Ledger** for Smart India Hackathon 2026.
 
 <div align="center"> 
 <br/>
